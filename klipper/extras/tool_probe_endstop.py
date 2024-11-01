@@ -185,7 +185,7 @@ class ToolProbeEndstop:
             self.crash_gcode.run_gcode_from_command()
             pause_resume = self.printer.lookup_object('pause_resume')
             if pause_resume:
-                pause_resume.cmd_PAUSE(gcmd)
+                pause_resume.cmd_PAUSE(None)
             else:
                 gcmd.respond_info("PauseResume module not loaded")
 
